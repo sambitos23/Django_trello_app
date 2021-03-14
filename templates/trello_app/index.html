@@ -1,0 +1,51 @@
+{% extends 'trello_app/base.html' %}
+
+{% block title %}
+    Trello App
+{% endblock %}
+
+{% block content %}
+    <h1>All Task List</h1>
+
+    <ul>
+        {% for list in lists %} 
+        <li>
+            {{ list.name }}
+        </li>   
+        {% endfor %}
+    </ul>
+
+    <h1>All Tasks</h1>
+
+    <ul>
+        {% for task in tasks %} 
+        <li>
+            {{ task.name }}
+        </li>   
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello App</title>
+</head>
+<body>
+    <h1>All Task List</h1>
+
+    <ul>
+        {% for list in lists %} 
+        <li>
+            {{ list.name }}
+        </li>   
+        {% endfor %}
+    </ul>
+</body>
+</html> -->

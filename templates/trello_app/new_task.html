@@ -1,0 +1,18 @@
+{% extends 'trello_app/base.html' %}
+
+{% block title %}
+    New Task
+{% endblock %}
+
+{% block content %}
+    <h1>New Task</h1>
+
+    {# Form #}
+    {# CSRF Token: Cross Site Request Forgery Token #}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% comment %} Inputs added by django {% endcomment %}
+        {{ form.as_p }}
+        <input type="submit" value="Add List" />
+    </form>    
+{% endblock %}
